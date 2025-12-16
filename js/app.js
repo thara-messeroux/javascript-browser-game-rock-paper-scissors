@@ -1,9 +1,11 @@
 console.log('Hello World!');
 
 /*-------------------------------- Constants --------------------------------*/
+
 const choices = ['rock', 'paper', 'scissors'];
 
 /*-------------------------------- Variables --------------------------------*/
+
 let computerChoice; /* will store the computer’s current move */
 let msg; /* will store the message shown to the user (win/lose/tie) - the computer’s selection, which is randomly determined,*/
 let playerChoice; /* will store the player’s current move */
@@ -13,7 +15,12 @@ let playerChoice; /* will store the player’s current move */
 
 
 /*------------------------ Cached Element References ------------------------*/
+/*--------------------- Cached Element References ---------------------*/
+
+const resultDisplayEl = document.querySelector('#result-display');
+
 
 /*-------------------------------- Functions --------------------------------*/
 
 /*----------------------------- Event Listeners -----------------------------*/
+
