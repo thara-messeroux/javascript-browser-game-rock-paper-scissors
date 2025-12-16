@@ -21,12 +21,18 @@ const resultDisplayEl = document.querySelector('#result-display');
 
 /*-------------------------------- Functions --------------------------------*/
 
+/* Runs when a player clicks Rock, Paper, or Scissors */
+const play = (event) => {
+    console.log(event.target);
+};
+
 /*----------------------------- Event Listeners -----------------------------*/
 
-// document.querySelector('#rock').addEventListener('click', play);
-// document.querySelector('#paper').addEventListener('click', play);
-// document.querySelector('#scissors').addEventListener('click', play);
-
+/*
+document.querySelector('#rock').addEventListener('click', play);
+document.querySelector('#paper').addEventListener('click', play);
+document.querySelector('#scissors').addEventListener('click', play);
+ */
 
 document.querySelectorAll('button').forEach(function (button) {
     button.addEventListener('click', play);
