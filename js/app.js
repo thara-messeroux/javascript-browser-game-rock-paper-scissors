@@ -23,8 +23,11 @@ const resultDisplayEl = document.querySelector('#result-display');
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-document.querySelector('#rock').addEventListener('click', handleClick);
-document.querySelector('#paper').addEventListener('click', handleClick);
-document.querySelector('#scissors').addEventListener('click', handleClick);
+// document.querySelector('#rock').addEventListener('click', play);
+// document.querySelector('#paper').addEventListener('click', play);
+// document.querySelector('#scissors').addEventListener('click', play);
 
 
+document.querySelectorAll('button').forEach(function (button) {
+    button.addEventListener('click', play);
+});
