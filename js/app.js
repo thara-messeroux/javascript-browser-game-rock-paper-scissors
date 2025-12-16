@@ -15,7 +15,6 @@ let playerChoice; /* will store the player’s current move */
 
 
 /*------------------------ Cached Element References ------------------------*/
-/*--------------------- Cached Element References ---------------------*/
 
 const resultDisplayEl = document.querySelector('#result-display');
 
@@ -23,4 +22,9 @@ const resultDisplayEl = document.querySelector('#result-display');
 /*-------------------------------- Functions --------------------------------*/
 
 /*----------------------------- Event Listeners -----------------------------*/
+
+document.querySelector('#rock').addEventListener('click', handleClick);
+document.querySelector('#paper').addEventListener('click', handleClick);
+document.querySelector('#scissors').addEventListener('click', handleClick);
+
 
