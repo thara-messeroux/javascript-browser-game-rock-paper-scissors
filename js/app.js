@@ -36,8 +36,10 @@ const getPlayerChoice = (event) => {
 const play = (event) => {
     getPlayerChoice(event);
     getComputerChoice();
-    console.log('playerChoice:', playerChoice);
-    console.log('computerChoice:', computerChoice);
+    compareChoices();
+    console.log('player:', playerChoice);
+    console.log('computer:', computerChoice);
+    console.log('result:', msg);
 };
 
 /* Sets computerChoice to a random choice from the choices array */
@@ -53,6 +55,30 @@ const getComputerChoice = () => {
 
     /* Uses the random index to pick one item from the choices array */
     computerChoice = choices[randomIndex];
+};
+
+
+
+/* Determines the game result based on player and computer choices */
+const compareChoices = () => {
+    /* Checks for a tie */
+    if (playerChoice === computerChoice) {
+        msg = "It's a tie!";
+        return;
+    }
+
+    /* Checks all winning conditions for the player */
+    if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper') ||
+        (playerChoice === 'paper' && computerChoice === 'rock')
+    ) {
+        msg = 'You win!';
+        return;
+    }
+
+    /* If not a tie or win, the player loses */
+    msg = 'You lose!';
 };
 
 
