@@ -21,9 +21,9 @@ const resultDisplayEl = document.querySelector('#result-display');
 
 /* Runs when a player clicks Rock, Paper, or Scissors */
 // const play = (event) => {
-    // console.log(event);            // everything
+// console.log(event);            // everything
 //     console.log(event.target);     // the button
-    // console.log(event.target.id);  // "rock", "paper", or "scissors"
+// console.log(event.target.id);  // "rock", "paper", or "scissors"
 
 // };
 
@@ -59,9 +59,9 @@ const getComputerChoice = () => {
 };
 
 
-
 /* Determines the game result based on player and computer choices */
 const compareChoices = () => {
+
     /* Checks for a tie */
     if (playerChoice === computerChoice) {
         msg = "It's a tie!";
@@ -87,7 +87,6 @@ const compareChoices = () => {
 const render = () => {
     resultDisplayEl.textContent = msg;
 };
-
 
 /*----------------------------- Event Listeners -----------------------------*/
 
