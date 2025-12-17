@@ -35,8 +35,26 @@ const getPlayerChoice = (event) => {
 /* Runs when a player clicks Rock, Paper, or Scissors */
 const play = (event) => {
     getPlayerChoice(event);
-    console.log(playerChoice);
+    getComputerChoice();
+    console.log('playerChoice:', playerChoice);
+    console.log('computerChoice:', computerChoice);
 };
+
+/* Sets computerChoice to a random choice from the choices array */
+const getComputerChoice = () => {
+    /* Gets a random decimal number from 0 (inclusive) to 1 (exclusive) */
+    const randomNumber = Math.random();
+
+    /* Scales the random number to the size of the choices array (0 up to 3) */
+    const scaledNumber = randomNumber * choices.length;
+
+    /* Rounds down to get a whole number index: 0, 1, or 2 */
+    const randomIndex = Math.floor(scaledNumber);
+
+    /* Uses the random index to pick one item from the choices array */
+    computerChoice = choices[randomIndex];
+};
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 
