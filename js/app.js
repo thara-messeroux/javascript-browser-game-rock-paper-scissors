@@ -37,6 +37,7 @@ const play = (event) => {
     getPlayerChoice(event);
     getComputerChoice();
     compareChoices();
+    render();
     console.log('player:', playerChoice);
     console.log('computer:', computerChoice);
     console.log('result:', msg);
@@ -79,6 +80,12 @@ const compareChoices = () => {
 
     /* If not a tie or win, the player loses */
     msg = 'You lose!';
+};
+
+/* Updates the UI with the current game message */
+/* Creates a function whose only job is updating the screen */
+const render = () => {
+    resultDisplayEl.textContent = msg;
 };
 
 
